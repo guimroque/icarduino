@@ -1,0 +1,45 @@
+<%- include ("./partials/header.ejs") %>
+<%- include ("./partials/homenavbar.ejs") %>
+<body>
+    <div class="container mt-2">
+        <% if(senha_msg == 'As senhas nao coincidem!') { %>
+                        
+                        <div class="alert alert-danger mt-2"><%= senha_msg %></div>
+                        
+                    <% } %>
+        
+        <% if(nome_msg == 'Equipe ja existe') { %>
+                        <div class="alert alert-danger mt-2"><%= nome_msg %></div>
+                        
+                    <% } %>
+
+        <% if(email_msg == 'Email ja existe') { %>
+                        <div class="alert alert-danger mt-2"><%= email_msg %></div>
+                        <br>
+                    <% } %>
+        <h2 class="mt-2">Cadastrar equipe</h2>
+        <hr>
+        <form action="/cadastro/store" method="POST">
+            <div class="card">
+                
+                <div class="card-header">
+                    <h4>Nova equipe:</h4>
+                </div>
+                <div class="card-body">
+                <% senha_msg %>
+                    <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome da equipe"><br>
+                    <input type="text" name="email" id="email" placeholder="Seu e-mail" class="form-control"><br>
+                    <input type="password" name="senha" id="senha" placeholder="Sua senha" class="form-control"><br>
+                    <input type="password" name="senhaa" id="senhaa" placeholder="Confirme sua senha" class="form-control"><br>
+                
+                </div>
+
+                <div class="card-footer">
+                    <button class="btn btn-success btn-block">Cadastrar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+<%- include ("./partials/footer.ejs") %>

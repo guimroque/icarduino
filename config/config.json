@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "miguelroque",
+    "password": "miguel2001",
+    "database": "enviosarduino",
+    "host": "mysql669.umbler.com",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "test": {
+    "username": "miguelroque",
+    "password": "miguel2001",
+    "database": "enviosarduino",
+    "host": "mysql669.umbler.com",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "miguelroque",
+    "password": "miguel2001",
+    "database": "enviosarduino",
+    "host": "mysql669.umbler.com",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  }
+}

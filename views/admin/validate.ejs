@@ -1,0 +1,32 @@
+<%- include ("../partials/header.ejs") %>
+<%- include ("../partials/navbar.ejs") %>
+<body>
+        <div class='card mt-4'>
+            <div class='card-header'>
+            <h2 class = 'mt-2'>Ultimos envios:<h2>
+            </div>
+            <% missions.forEach((dataValues)=> { %>
+            
+            <form action="/admin/validar" method="POST">
+                <div class = 'alert alert-secondary mt-2'>
+                    <input type='hidden' name='id' value=<%=dataValues.id%>>
+                    <%=dataValues.mission%><br>
+                    Link: <a href=<%=dataValues.link%>><%=dataValues.link%></a><br>
+                    Equipe: <%=dataValues.equipe%><br>
+                    Data de envio: <%=dataValues.createdAt%>
+                    <br>
+                    <label>Status:<br><label>
+                        <select class='form-control' name='validate'>
+                            <option></option>
+                            <option>Correto</option>
+                            <option>Errado</option>
+
+                        </select>
+                    <button class="btn btn-success btn-block mt-2">Validar</button>
+                </div>
+            </form>
+        </div>
+        <% }) %>
+</body>
+
+<%- include ("../partials/footer.ejs") %>
