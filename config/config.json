@@ -1,24 +1,24 @@
 {
   "development": {
-    "username": "miguelroque",
+    "username": "guimroque",
     "password": "miguel2001",
-    "database": "enviosarduino",
+    "database": "inatelenvios",
     "host": "mysql669.umbler.com",
     "dialect": "mysql",
     "operatorsAliases": false
   },
   "test": {
-    "username": "miguelroque",
+    "username": "guimroque",
     "password": "miguel2001",
-    "database": "enviosarduino",
+    "database": "inatelenvios",
     "host": "mysql669.umbler.com",
     "dialect": "mysql",
     "operatorsAliases": false
   },
   "production": {
-    "username": "miguelroque",
+    "username": "guimroque",
     "password": "miguel2001",
-    "database": "enviosarduino",
+    "database": "inatelenvios",
     "host": "mysql669.umbler.com",
     "dialect": "mysql",
     "operatorsAliases": false
