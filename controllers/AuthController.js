@@ -2,7 +2,13 @@ const AuthService = require("../services/AuthService")
 const jwt = require('jsonwebtoken');
 const authConfig = require('../config/auth.json')
 class AuthController{
-    
+  
+    privacidade(req, res){
+        
+        res.render("privacidade");
+    }
+
+
     index(req, res){
         
         res.render("index");
