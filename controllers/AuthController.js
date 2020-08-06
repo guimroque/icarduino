@@ -8,7 +8,6 @@ class AuthController{
         res.render("privacidade");
     }
 
-
     index(req, res){
         
         res.render("index");
