@@ -6,7 +6,7 @@
             <div class="jumbotron">
                 <h1 class="display-4">Bem vindos a plataforma de envios<br> Arduino challenge!</h1>
                 <p class="lead">Aqui serão feitos os envios de missões durante as competições.</p>
-                <% if(req.session.adm == true){%>
+                <% if(btnadm == true){%>
                     <li class="nav-item">
                             <a  class="btn btn-success" href="/admin/missions"><button>Correções</button></a>
                         </li>
