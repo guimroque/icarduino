@@ -20,7 +20,7 @@ class UserController{
         console.log(decoded)
         })
         var envios = await UserService.listagem(equipe)
-        res.render('user/envTecnico', {envios:envios});
+        res.render('user/envRegular', {envios:envios});
     }
     //pegando dados do formulário
     async store(req,res){
