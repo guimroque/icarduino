@@ -68,12 +68,11 @@ class AuthController{
             
             req.session.token = token;
             
-            res.redirect('/user/index', {btnadm: req.session.adm})
+            res.redirect('/user/index')
         }
     }
 //deslogando-se
     logout(req, res){
-        req.session.token = undefined;
         res.redirect('/login')
     }
 }
