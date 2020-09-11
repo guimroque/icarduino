@@ -1,25 +1,25 @@
 {
   "development": {
-    "username": "root",
-    "password": "1234",
-    "database": "arduinoc",
-    "host": "127.0.0.1",
+    "username": "miguelroque",
+    "password": "miguel2001",
+    "database": "enviosarduino",
+    "host": "mysql669.umbler.com",
     "dialect": "mysql",
     "operatorsAliases": false
   },
   "test": {
-    "username": "root",
-    "password": "1234",
-    "database": "arduinoc",
-    "host": "127.0.0.1",
+    "username": "miguelroque",
+    "password": "miguel2001",
+    "database": "enviosarduino",
+    "host": "mysql669.umbler.com",
     "dialect": "mysql",
     "operatorsAliases": false
   },
   "production": {
-    "username": "root",
-    "password": "1234",
-    "database": "arduinoc",
-    "host": "127.0.0.1",
+    "username": "miguelroque",
+    "password": "miguel2001",
+    "database": "enviosarduino",
+    "host": "mysql669.umbler.com",
     "dialect": "mysql",
     "operatorsAliases": false
   }

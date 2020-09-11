@@ -19,7 +19,6 @@ class AuthController{
             }
             if(decoded.email=='admin@gmail.com'){
                 console.log('mdadmin ok')
-                req.session.adm = true;
                 next()
             }
         })

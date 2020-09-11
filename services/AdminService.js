@@ -4,8 +4,7 @@ const authConfig = require('../config/auth.json')
 
 class AdminService{
     constructor(){//trazendo banco de dados para o arquivo
-        this.mission = Database["enviomission"];
-        this.dinossauro = Database["dinossauro"];            
+        this.mission = Database["enviomission"];                
     }
 //função que salva missao no DB
     async validateM(){
@@ -28,18 +27,6 @@ class AdminService{
             }
         })
 
-    }
-    async adddino(dino){
-        console.log("cheguei no service")
-        console.log(dino)
-
-        try{
-            await this.dinossauro.create(dino);
-            return null
-        }catch(errors){
-            console.log("erros: "+errors)
-            return errors
-        }
     }
 }
 module.exports = new AdminService();
