@@ -5,7 +5,7 @@ const secret = require('../config/auth.json')
 class AuthService{
 
     constructor(){
-        this.User = Database['user'];              
+        this.User = Database["user"];                
     }
 //função de criação de usuario
     async store(user){
@@ -16,12 +16,14 @@ class AuthService{
                 console.log("passou pela validação");
             try{
                 user.password = await bcrypt.hash(user.password, 10);
+                
                 await this.User.create(user);
                 return true;
             }catch(errors){
+                
                 errors.push("Não foi possivel registrar usuario")
                 return errors;
-            }
+            } 
         }else{
             return errors;
         }
@@ -118,11 +120,9 @@ async getByEquipe(dado){
             const token = await jwt.sign({
                 
                 nome:email.nome,
-                modalidade:email.modalidade,
                 email:email.email}, secret.secret, {
                 expiresIn: 86400,
             });
-            console.log(token)
             return token;
             
         }
