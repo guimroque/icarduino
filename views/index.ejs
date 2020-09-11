@@ -1,17 +1,55 @@
 <%- include ("./partials/header.ejs") %>
-<%- include ("./partials/homenavbar.ejs") %>
-<body>
-    <div class = "container mt-4">
+<body  style="background: #111111;">
+ 
     
-            <div class="jumbotron">
-                <h1 class="display-4">Bem vindos a plataforma de envios<br> Arduino challenge!</h1>
-                <p class="lead">Aqui serão feitos os envios de missões durante as competições.</p>
-                <hr class="my-4">
-                <p>Se voce irá participar, e ainda nao cadastrou sua equipe, registre-a no botão abaixo</p>
-                <a class="btn btn-primary btn-lg" href="/cadastro" role="button">Cadastro</a>
-            </div>
+       
+        <div class="container">
+            <div class="row">
+              <div class="col">
                 
-                </div>
+              </div>
+              <div class="col-8 capa align-items-end">
+                
+                
+                <div class="row w-100">
+                    <div class="col">
+                        
+                    </div>
+                    <div class="col">
+                    </div>
+                    <div class="col justify-content-center">
+                        
+                    </div>
+                    <div class="col">
+                        <a href="/cadastro"><button type="button" class="btn btn-outline-light" style="height: 50px; min-width: 100px;">Registro</button></a>
+                    </div>
+                    <div class="col">
+                        <a href="/login"><button type="button" class="btn btn-outline-light" style="height: 50px; min-width: 100px;">Login</button></a>
+                    </div>
+                    <div class="col">
+                        
+                    </div>
+                    <div class="col">
+                        
+                    </div>
+                    
+                  </div>
+              </div>
+              <div class="col">
+              </div>
+              
+            </div>
 </body>
 
 <%- include ("./partials/footer.ejs") %>
+
+
+<style>
+.capa{
+    background-image: url("/img/capa.svg");
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 100px;
+}
+</style>

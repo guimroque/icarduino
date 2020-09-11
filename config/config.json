@@ -1,25 +1,25 @@
 {
   "development": {
-    "username": "guimroque",
-    "password": "miguel2001",
-    "database": "inatelenvios",
-    "host": "mysql669.umbler.com",
+    "username": "root",
+    "password": "1234",
+    "database": "arduinoc",
+    "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
   },
   "test": {
-    "username": "guimroque",
-    "password": "miguel2001",
-    "database": "inatelenvios",
-    "host": "mysql669.umbler.com",
+    "username": "root",
+    "password": "1234",
+    "database": "arduinoc",
+    "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
   },
   "production": {
-    "username": "guimroque",
-    "password": "miguel2001",
-    "database": "inatelenvios",
-    "host": "mysql669.umbler.com",
+    "username": "root",
+    "password": "1234",
+    "database": "arduinoc",
+    "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
   }

@@ -7,6 +7,27 @@ class UserController{
         var data = new Date;
         res.render('user/index', {data:data});
     }
+    async dino(req, res){
+        var id = req.params.id;
+        console.log('id: ',id)
+        try{
+            var dino = await UserController.findID(id);
+            console.log(dino)
+            res.render('user/dino',{dino:dino})
+        }catch(err){
+            console.log(err)
+        }
+        res.render('user/dino');
+    }
+    async wiki(req, res){
+        try{
+            var dino = await UserService.findDino();
+            res.render('user/wiki', {dino:dino});
+        }catch(err){
+            console.log(err)
+            res.render('user/wiki');
+        }
+    }
 
    
 //receber missao
