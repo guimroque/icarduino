@@ -1,30 +1,56 @@
-<%- include ("./partials/header.ejs") %>
-<%- include ("./partials/homenavbar.ejs") %>
-<body>
-    <div class="container mt-2">
-        <% if(result == 'Dados invalidos') { %>
-                        <div class="alert alert-danger"><%= result %></div>
-                        <br>
-                    <% } %>
-        <form action="/login/auth" method="POST" class="mt-2">
-            <div class="card">
-                
-                <div class="card-header">
-                    <h4>Informe os dados abaixo:</h4>
+<%- include ("partials/header.ejs") %>
+
+<body class="jumbotron bg-dark" >
+    
+      <div class="container justify-content-center">
+        <div class="row text-center">
+          <div class="col">
+              <a href="/index"><ion-icon name="chevron-back-outline" class="icon btn btn-dark">back</ion-icon></a>
+          </div>
+          <div class="col-6 mt-0 pt-0 bg-dark" style="min-width: 450px; background: #000;">
+            <div class="card w-100 text-center"  style="border: 1px solid grey; border-radius: 3px;">
+                <div class="card-header" style="background: #000;">
+                  <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="/cadastro">Registro</a>
+                    </li>
+                  </ul>
                 </div>
                 <div class="card-body">
+                    
+                  <h3 class="card-title">Bem vindo </h3>
+                  <form action="/login/auth" method="post">
+                        
+                  <div class="col-sm-12 mt-5">
+                    <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="E-mail">
+                  </div>
+                  
+                  <div class="col-sm-12 mt-3">
+                    <input type="password" class="form-control form-control-lg" id="email" name="email" placeholder="Password">
+                  </div>
 
-                    <input type="text" name="email" id="email" placeholder="Seu e-mail" class="form-control"><br>
-                    <input type="password" name="senha" id="senha" placeholder="Sua senha" class="form-control"><br>
-                
+                  <div class="col-sm-12 my-3">
+                      <button type="submit" class="btn btn-outline-dark btn-lg">Entrar</button>
+                  </div>
+                  </form>
+              </div>
+            
                 </div>
+          </div>
+          <div class="col align-items-end mt-5 bg-dark"  >
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <img src="/img/dino.png" style=" height: 27%; width: 100%;">
+          </div>
+        </div>
+      </div>
+    </body>
 
-                <div class="card-footer">
-                    <button class="btn btn-success btn-block">Login</button>
-                </div>
-            </div>
-        </form>
-    </div>
-</body>
-
-<%- include ("./partials/footer.ejs") %>
+    <style>
+        .icon{
+            height: 30px;
+            width: 30px;
+        }
+    </style>

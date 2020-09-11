@@ -3,6 +3,8 @@ const app = express();
 const bodyParser = require("body-parser");
 const session = require("express-session");
 const flash = require("connect-flash")
+const path = require('path')
+const fileUpload = require('express-fileupload')
 
 //Routers - importando rotas
 const UsersRouter = require('./routes/UserRouter')
@@ -10,6 +12,8 @@ const AuthRouter = require("./routes/AuthRouter")
 const AdminRouter = require('./routes/AdminRouter')
 // View engine
 app.set('view engine','ejs');
+app.set('views', __dirname + '/views'); //Local onde vai ser salvo o file
+app.use(express.static(path.join(__dirname, 'public')));//local dos arquivos estaticos
 
 app.use(session({
     secret: "qualquercoisa", cookie: { maxAge: 30000000}
@@ -17,11 +21,10 @@ app.use(session({
 
 app.use(flash());
 
-app.use(express.static('public'));
-
 //Body parser
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+app.use(fileUpload());//setando uso da biblioteca fileupload
 
 //Routes
 app.use("/", AuthRouter);

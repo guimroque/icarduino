@@ -1,24 +1,33 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('enviomission', {
+    return queryInterface.createTable('dinossauros', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      mission: {
+      nome: {
         type: Sequelize.STRING
       },
-      equipe: {
+      img: {
         type: Sequelize.STRING
       },
-      link: {
-        type: Sequelize.STRING
-      },
-      validar: {
+      comprimento: {
         type: Sequelize.INTEGER
+      },
+      altura: {
+        type: Sequelize.INTEGER
+      },
+      peso: {
+        type: Sequelize.INTEGER
+      },
+      velocidade: {
+        type: Sequelize.INTEGER
+      },
+      caracteristicas: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
@@ -31,6 +40,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('enviomission');
+    return queryInterface.dropTable('dinossauros');
   }
 };

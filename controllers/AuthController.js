@@ -1,15 +1,15 @@
 const AuthService = require("../services/AuthService")
 const jwt = require('jsonwebtoken');
 const authConfig = require('../config/auth.json')
+
+
 class AuthController{
   
     privacidade(req, res){
-        
         res.render("privacidade");
     }
 
     index(req, res){
-        
         res.render("index");
     }
     informacoes(req, res){
@@ -20,16 +20,18 @@ class AuthController{
     //rota get cadastro
     cadastro(req,res){
         res.render("cadastro", {nome_msg: req.flash('nome_msg'),email_msg: req.flash('email_msg'), senha_msg: req.flash('senha_msg')});
-    }
+       }
     //rota post cadastro
     async store(req,res){
-        var{nome, email, senha, senhaa } = req.body;
+        var{nome, email, senha, senhaa, modalidade } = req.body;
         var user = {
             nome,
             email,
+            modalidade:modalidade,
             password:senha,
             senhaa
         }
+        console.log(user)
         var result = await AuthService.store(user);
         if(result == true){
             const token = await AuthService.token(user)

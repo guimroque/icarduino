@@ -1,45 +1,67 @@
-<%- include ("./partials/header.ejs") %>
-<%- include ("./partials/homenavbar.ejs") %>
-<body>
-    <div class="container mt-2">
-        <% if(senha_msg == 'As senhas nao coincidem!') { %>
-                        
-                        <div class="alert alert-danger mt-2"><%= senha_msg %></div>
-                        
-                    <% } %>
-        
-        <% if(nome_msg == 'Equipe ja existe') { %>
-                        <div class="alert alert-danger mt-2"><%= nome_msg %></div>
-                        
-                    <% } %>
+<%- include ("partials/header.ejs") %>
 
-        <% if(email_msg == 'Email ja existe') { %>
-                        <div class="alert alert-danger mt-2"><%= email_msg %></div>
-                        <br>
-                    <% } %>
-        <h2 class="mt-2">Cadastrar equipe</h2>
-        <hr>
-        <form action="/cadastro/store" method="POST">
-            <div class="card">
-                
-                <div class="card-header">
-                    <h4>Nova equipe:</h4>
+<body class="jumbotron bg-dark" >
+    
+      <div class="container justify-content-center">
+        <div class="row text-center">
+          <div class="col" >
+            <a href="/index"><ion-icon name="chevron-back-outline" class="icon btn btn-dark">back</ion-icon></a>
+          </div>
+          <div class="col-6 mt-0 pt-0 bg-dark" style="min-width: 450px; background: #000;">
+            <div class="card w-100 text-center"  style="border: 1px solid grey; border-radius: 3px;">
+                <div class="card-header" style="background: #000;">
+                  <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link  active" href="/cadastro">Registro</a>
+                    </li>
+                  </ul>
                 </div>
                 <div class="card-body">
-                <% senha_msg %>
-                    <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome da equipe"><br>
-                    <input type="text" name="email" id="email" placeholder="Seu e-mail" class="form-control"><br>
-                    <input type="password" name="senha" id="senha" placeholder="Sua senha" class="form-control"><br>
-                    <input type="password" name="senhaa" id="senhaa" placeholder="Confirme sua senha" class="form-control"><br>
-                
+                    
+                  <h3 class="card-title">Bem vindo</h3>
+                  <form action="/cadastro/store" method="post">
+                        
+                    <div class="col-sm-12 mt-5">
+                      <input type="text" class="form-control form-control-lg" id="nome" name="nome" placeholder="Nome da equipe">
+                    </div>
+                    <div class="col-sm-12 mt-3">
+                      <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="E-mail">
+                    </div>
+                    <div class="col-sm-12 mt-3">
+                      <select class='form-control form-control-lg' required name='modalidade' id="modalidade" placeholder="Modalidade">
+                          <option></option>
+                          <option>Regular</option>
+                          <option>Técnico</option>
+                      </select>
+                      </div>
+                    <div class="col-sm-12 mt-3 form-group">
+                      <input type="password" class="form-control form-control-lg" id="senha" name="senha" placeholder="Senha">
+                  </div>
+                    <div class="col-sm-12 mt-3">
+                      <input type="password" class="form-control form-control-lg" id="senhaa" name="senhaa" placeholder="Confirme sua senha">
+                    </div>
+                    
+                    <div class="col-sm-12 my-3">
+                        <button type="submit" class="btn btn-outline-dark btn-lg">Registrar-se</button>
+                    </div>
+                    </form>
+              </div>
+            
                 </div>
-
-                <div class="card-footer">
-                    <button class="btn btn-success btn-block">Cadastrar</button>
-                </div>
-            </div>
-        </form>
-    </div>
-</body>
-
-<%- include ("./partials/footer.ejs") %>
+          </div>
+          <div class="col align-items-end mt-5 bg-dark">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <img src="/img/dino.png" style=" height: 23%; width: 100%;">
+          </div>
+        </div>
+      </div>
+    </body>
+    <style>
+        .icon{
+            height: 30px;
+            width: 30px;
+        }
+    </style>
